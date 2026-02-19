@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Veer Ji · happy birthday 🧿🧿 (mobile)</title>
+    <!-- Google fonts & Font Awesome for icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(145deg, #fef9e7 0%, #ffedd1 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;          /* smaller padding for mobile */
+            position: relative;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* floating shiny background elements – scaled for mobile */
+        .floating-nazar {
+            position: absolute;
+            font-size: clamp(2.5rem, 15vw, 4rem);  /* responsive size */
+            opacity: 0.2;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1;
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .floating-nazar:nth-child(1) { top: 2%; left: 1%; animation-delay: 0s; transform: rotate(-8deg); }
+        .floating-nazar:nth-child(2) { bottom: 3%; right: 0%; animation-delay: 1.8s; transform: rotate(12deg); }
+        .floating-nazar:nth-child(3) { top: 15%; right: 2%; animation-delay: 0.9s; }
+        .floating-nazar:nth-child(4) { bottom: 10%; left: 3%; animation-delay: 2.5s; transform: rotate(20deg); }
+        .floating-nazar:nth-child(5) { top: 40%; left: 5%; animation-delay: 0.4s; }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(4deg); }  /* smaller movement on mobile */
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        .card {
+            position: relative;
+            z-index: 20;
+            width: 100%;
+            max-width: 450px;        /* perfect for mobile, never too wide */
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 50px 50px 50px 50px;
+            box-shadow: 0 25px 40px rgba(0,0,0,0.2), 0 0 0 2px #ffcd7e inset, 0 0 0 4px #ffdca8 inset;
+            padding: 30px 18px 35px 18px;    /* comfortable touch spacing */
+            border: 2px solid #ff9f40;
+            text-align: center;
+            margin: 5px auto;
+        }
+
+        .header-icon {
+            display: flex;
+            justify-content: center;
+            gap: 15px;               /* less gap for mobile */
+            margin-bottom: 0;
+            font-size: 2.2rem;        /* slightly smaller */
+            color: #c44b2b;
+            text-shadow: 1px 1px 0 #ffdb9f;
+            flex-wrap: wrap;
+        }
+
+        .header-icon i {
+            filter: drop-shadow(0 4px 4px #0000001a);
+        }
+
+        .nazar-decor {
+            font-size: 1.9rem;
+            letter-spacing: 8px;
+            color: #1e4f8a;
+            margin: 5px 0 0 0;
+            opacity: 0.8;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3.8rem, 15vw, 5rem);  /* adapts smoothly */
+            font-weight: 400;
+            background: linear-gradient(135deg, #b13b3b, #e65f1e, #d19b1a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1;
+            margin: 5px 0 0 0;
+            text-shadow: 2px 2px 15px #ffc994;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;          /* mobile friendly */
+            font-weight: 300;
+            color: #6e3c1c;
+            background: #fff2d0cc;
+            display: inline-block;
+            padding: 0.2rem 1.5rem;
+            border-radius: 40px;
+            backdrop-filter: blur(4px);
+            margin-top: 2px;
+            margin-bottom: 20px;
+            border: 1px dashed #f39c4b;
+            box-shadow: 0 4px 8px #fad39c;
+        }
+
+        .subtitle i {
+            color: #b33f1c;
+            margin: 0 4px;
+        }
+
+        .avatar-blessing {
+            background: #fffae6;
+            border-radius: 60px;
+            padding: 8px 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+            border: 2px solid #e8a154;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 0 #a6531e;
+        }
+
+        .avatar-blessing span {
+            font-size: 2rem;
+        }
+
+        .message-box {
+            background: #faeddaba;
+            padding: 25px 16px;
+            border-radius: 60px 15px 60px 15px;
+            border: 3px solid #eeaa4d;
+            box-shadow: inset 0 1px 10px #ffd894, 0 10px 15px #ffcf8e;
+            margin-bottom: 30px;
+            font-size: 1.4rem;          /* easy reading on mobile */
+            font-weight: 400;
+            color: #4f2e1c;
+            line-height: 1.5;
+        }
+
+        .message-box i {
+            color: #bf471d;
+            margin: 0 6px;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            background: #fde3bb;
+            padding: 12px 10px;
+            border-radius: 40px;
+            margin: 15px 0 0 0;
+            border-left: 8px solid #f57c00;
+            font-weight: 300;
+        }
+
+        .countdown-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;                /* tighter on mobile */
+            margin: 20px 0 20px;
+            flex-wrap: wrap;
+        }
+
+        .badge-item {
+            background: #fff2d9;
+            padding: 8px 12px;
+            border-radius: 50px;
+            border: 2px solid #e09140;
+            box-shadow: 0 4px 0 #a0491b;
+            font-size: 1rem;          
+            font-weight: 600;
+            color: #733a15;
+            min-width: 130px;
+            flex: 1 0 auto;            /* flexible, fits three in a row if space */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .badge-item i {
+            margin-right: 3px;
+            color: #ac391b;
+            font-size: 1.1rem;
+        }
+
+        /* big attractive button - mobile tap friendly */
+        .action-button {
+            background: linear-gradient(145deg, #f48738, #db581d);
+            border: none;
+            padding: 16px 20px;
+            border-radius: 50px;
+            font-size: 1.5rem;          
+            font-weight: 700;
+            color: white;
+            text-shadow: 1px 1px 0 #943d18;
+            box-shadow: 0 9px 0 #6b3518, 0 5px 20px #fc9e47;
+            cursor: pointer;
+            transition: 0.06s linear;
+            border: 2px solid #ffe19c;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            width: auto;
+            min-width: 250px;
+            max-width: 90%;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .action-button:active {
+            transform: translateY(5px);
+            box-shadow: 0 4px 0 #6b3518, 0 8px 20px #fc9e47;
+        }
+
+        .action-button i {
+            font-size: 1.8rem;
+        }
+
+        /* surprise message – fits mobile */
+        #surpriseMessage {
+            background: #e3bc83;
+            border-radius: 40px;
+            padding: 15px 15px;
+            font-size: 1.4rem;
+            margin: 10px auto 5px auto;
+            max-width: 95%;
+            border-left: 6px solid #c45108;
+            color: #281607;
+            font-weight: 500;
+            display: none;
+            box-shadow: 0 8px 15px #c47930;
+            line-height: 1.4;
+        }
+
+        .footer-note {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #99481b;
+            background: #fff4dbc9;
+            padding: 6px 18px;
+            border-radius: 40px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #ffa55c;
+            flex-wrap: wrap;
+        }
+
+        .footer-note i {
+            color: #1e4f8a;
+        }
+
+        p {
+            margin-top: 25px;
+            font-size: 0.95rem;
+            color: #a55025;
+        }
+
+        /* sparkles smaller on mobile */
+        .sparkle {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 12px 3px #ff9f3d;
+            width: 5px;
+            height: 5px;
+            z-index: 5;
+            opacity: 0.4;
+            animation: twinkle 3.5s infinite;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; transform: scale(0.6); }
+            50% { opacity: 1; transform: scale(1.3); background: #ffdf7e; }
+            100% { opacity: 0.2; transform: scale(0.6); }
+        }
+
+        /* small screens adjustments */
+        @media (max-width: 380px) {
+            .badge-item {
+                min-width: 110px;
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            h1 { font-size: 3.5rem; }
+            .subtitle { font-size: 1.2rem; }
+            .message-box { font-size: 1.2rem; }
+            .action-button { font-size: 1.3rem; padding: 14px 10px; min-width: 220px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- background floating nazar (fewer but still visible) -->
+    <div class="floating-nazar">🧿</div>
+    <div class="floating-nazar">🧿</div>
+    <div class="floating-nazar">🧿</div>
+    <div class="floating-nazar">🧿</div>
+    <div class="floating-nazar">🧿</div>
+
+    <!-- tiny sparkle dots (mobile-optimized) -->
+    <div class="sparkle" style="top: 5%; left: 10%;"></div>
+    <div class="sparkle" style="top: 88%; left: 85%; animation-delay: 1.2s;"></div>
+    <div class="sparkle" style="top: 35%; left: 7%; animation-delay: 0.6s;"></div>
+    <div class="sparkle" style="top: 70%; left: 92%; animation-delay: 2s;"></div>
+    <div class="sparkle" style="top: 15%; left: 88%; animation-delay: 0.3s;"></div>
+
+    <!-- main birthday card – fully responsive width -->
+    <div class="card">
+        <div class="header-icon">
+            <i class="fas fa-birthday-cake"></i>
+            <i class="fas fa-balloon"></i>
+            <i class="fas fa-crown" style="color: #dba12b;"></i>
+        </div>
+        <div class="nazar-decor">
+            🧿 🧿 🧿
+        </div>
+        <h1>Veer Ji</h1>
+        <div class="subtitle">
+            <i class="fas fa-star"></i> happy birthday! <i class="fas fa-star"></i>
+        </div>
+
+        <!-- double nazar blessing -->
+        <div class="avatar-blessing">
+            <span>🧿</span>
+            <span style="font-weight:600;"> blessed day</span>
+            <span>🧿</span>
+        </div>
+
+        <!-- main message box (readable on small screen) -->
+        <div class="message-box">
+            <i class="fas fa-quote-left"></i>
+            May your year be as bright <br> as your smile, Veer Ji.
+            <div style="font-size: 1.2rem; margin-top: 10px; color:#773b00;">
+                🧿 infinite protection & joy 🧿
+            </div>
+            <div class="quote">
+                “Another year of greatness, laughter, and nazar blessings!”
+            </div>
+        </div>
+
+        <!-- mobile-friendly badges wrap nicely -->
+        <div class="countdown-badge">
+            <div class="badge-item"><i class="fa-regular fa-gem"></i> 365 wishes</div>
+            <div class="badge-item"><i class="fa-solid fa-champagne-glasses"></i> celebrate!</div>
+            <div class="badge-item"><i class="fa-regular fa-clock"></i> special day</div>
+        </div>
+
+        <!-- large tap area button for blessing (easy fat-finger) -->
+        <button class="action-button" id="surpriseBtn">
+            <i class="fa-regular fa-hand-sparkles"></i> click for blessing <i class="fa-regular fa-face-smile-wink"></i>
+        </button>
+
+        <!-- hidden blessing (shows when button tapped) -->
+        <div id="surpriseMessage">
+            🧿✨ May the nazar always protect you, Veer Ji! ✨🧿 <br>
+            <span style="font-size: 1.1rem;">happy birthday from aapki choti 🎂</span>
+        </div>
+
+        <!-- footer with more nazar -->
+        <div class="footer-note">
+            <i class="fa-regular fa-sun"></i>  🧿  always blessed  🧿  <i class="fa-regular fa-moon"></i>
+        </div>
+
+        <p style="margin-top: 25px;">
+            <i class="fa-regular fa-heart" style="color:#b22222;"></i> with love and nazar
+        </p>
+    </div>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('surpriseBtn');
+            const surpriseDiv = document.getElementById('surpriseMessage');
+            let visible = false;
+
+            // remove any inline style that might hide it initially (already hidden by CSS)
+            // ensure it starts hidden
+            surpriseDiv.style.display = 'none';
+
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();   // avoid any weirdness
+                if (!visible) {
+                    surpriseDiv.style.display = 'block';
+                    btn.innerHTML = '<i class="fa-regular fa-face-grin-hearts"></i>  blessing shown!  <i class="fa-regular fa-face-smile"></i>';
+                    visible = true;
+
+                    // light sparkle effect (mobile friendly)
+                    for (let i = 0; i < 5; i++) {
+                        const flash = document.createElement('div');
+                        flash.innerText = '🧿';
+                        flash.style.position = 'fixed';
+                        flash.style.left = Math.random() * 90 + 5 + '%';
+                        flash.style.top = Math.random() * 90 + 5 + '%';
+                        flash.style.fontSize = (1.8 + Math.random() * 1.5) + 'rem';
+                        flash.style.pointerEvents = 'none';
+                        flash.style.zIndex = '999';
+                        flash.style.opacity = '0.7';
+                        flash.style.transition = 'all 0.7s ease-out';
+                        flash.style.transform = 'scale(0.2) rotate(0deg)';
+                        flash.style.fontWeight = 'bold';
+                        document.body.appendChild(flash);
+                        setTimeout(() => {
+                            flash.style.transform = 'scale(2) rotate(15deg)';
+                            flash.style.opacity = '0';
+                        }, 20);
+                        setTimeout(() => {
+                            if (document.body.contains(flash)) document.body.removeChild(flash);
+                        }, 750);
+                    }
+                } else {
+                    surpriseDiv.style.display = 'none';
+                    btn.innerHTML = '<i class="fa-regular fa-hand-sparkles"></i> click for blessing <i class="fa-regular fa-face-smile-wink"></i>';
+                    visible = false;
+                }
+            });
+
+            // optional: make floating nazar respond to touch (just for delight)
+            const nazars = document.querySelectorAll('.floating-nazar');
+            nazars.forEach((n) => {
+                n.addEventListener('touchstart', (e) => {
+                    e.preventDefault();   // just to avoid any scroll interference
+                    n.style.transition = 'transform 0.15s, opacity 0.15s';
+                    n.style.transform = 'scale(1.3) rotate(5deg)';
+                    n.style.opacity = '0.5';
+                    setTimeout(() => {
+                        n.style.transform = '';
+                        n.style.opacity = '0.2';
+                    }, 200);
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
